@@ -1,0 +1,23 @@
+.suggestions {
+ width: 430px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ ul {
+  list-style: none;
+  background: lightblue;
+  width: 100%;
+  margin: 10px;
+  margin-top: -10px;
+  height: auto;
+  transition: all ease-in-out 1s;
+
+  z-index: 1;
+  li {
+   padding: 10px;
+   cursor: grab;
+   border-bottom: solid 1px white;
+  }
+ }
+}

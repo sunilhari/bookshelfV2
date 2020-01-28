@@ -1,0 +1,18 @@
+.Input {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ .search-input {
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+  font-size: 1em;
+ }
+ .input-button {
+  padding: 10px;
+  font-size: 1em;
+  background: black;
+  color: white;
+ }
+}
