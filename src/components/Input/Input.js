@@ -5,8 +5,6 @@ import { search } from "../../api";
 import {
  SET_SEARCH_TEXT,
  SET_SUGGESTIONS,
- CLEAR_INPUT,
- SELECTED_BOOK,
  ADD_BOOK
 } from "../../Context/Actions";
 import "./Input.scss";
@@ -30,18 +28,17 @@ function Input() {
    dispatch({ type: SET_SUGGESTIONS, payload: suggestions });
    dispatch({ type: SET_SEARCH_TEXT, payload: text });
   } else {
-   dispatch({ type: SET_SEARCH_TEXT, payload: text });
+   dispatch({ type: SET_SEARCH_TEXT, payload: "" });
   }
  }, [text, dispatch]);
 
  useEffect(() => {
   setText(state.searchText);
- }, [state.searchText, text]);
+ }, [state.searchText]);
 
  useEffect(() => {
   setText("");
  }, []);
- console.log("searchText", state.searchText);
  return (
   <form className="Input">
    <input
@@ -49,6 +46,7 @@ function Input() {
     className="search-input"
     onChange={onInput}
     value={text}
+    data-testid="test-search-input"
    />
    <button
     className="input-button"

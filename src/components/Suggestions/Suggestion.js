@@ -8,7 +8,6 @@ function Suggestion() {
   const { id } = event.currentTarget.dataset;
   const book = state.suggestions[id];
   dispatch({ type: SET_SEARCH_TEXT, payload: book.title });
-  console.log(book);
   dispatch({ type: SELECTED_BOOK, payload: book });
  }
  return (
